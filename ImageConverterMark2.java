@@ -9,15 +9,15 @@ import java.util.Map;
 public class ImageConverterMark2 {
 
     public static void main(String[] args){
-        String fileName = "src/planks";
+        String fileName = "planks";
         BufferedImage plankTexture = readImage(fileName + ".png");
         BufferedImage grayBoat;
 
-        File file = new File("src/grayscaled.png");
+        File file = new File("grayscaled.png");
         if(!file.exists()){
-            grayBoat = convertToGrayScale("src/boat.png");
+            grayBoat = convertToGrayScale("boat.png");
         }else{
-            grayBoat = readImage("src/grayscaled.png");
+            grayBoat = readImage("grayscaled.png");
         }
 
         Map<Float, Float> hueMap = new HashMap<>();
@@ -52,7 +52,7 @@ public class ImageConverterMark2 {
                 }
             }
         }
-        writeImage(grayBoat, "src/output.png");
+        writeImage(grayBoat, "output.png");
     }
 
 
@@ -106,7 +106,7 @@ public class ImageConverterMark2 {
                 inputImage.setRGB(x, y, p);
             }
         }
-        writeImage(inputImage, "src/grayscaled.png");
-        return readImage("src/grayscaled.png");
+        writeImage(inputImage, "grayscaled.png");
+        return readImage("grayscaled.png");
     }
 }

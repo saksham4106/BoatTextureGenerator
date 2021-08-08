@@ -3,8 +3,9 @@ Boat Texture Generator Tool <br>
 
 <br>
 <br>
+
 There is a `grayscaled.png` image which is a b/w version of Oak boat, to make a b/w version of another type of boat put 
-name the texture as "boat" and put it inside src directory
+name the texture as `boat.png`
 
 `planks.png` is the texture of the wooden planks
 `output.png` will be the resultant boat texture
